@@ -1,0 +1,68 @@
+
+.logo {
+   width:150px;
+   height: 150px;
+   align-self: center;
+   margin-bottom: 30px;
+}
+body {
+   display:flex;
+   flex-direction: column;
+   font-family: "Permanent marker", verdana, sans-serif;
+   text-align: center;
+   background-image: radial-gradient( circle 999px at 50.6% 40%,  rgb(250, 232, 217) 6.2%, rgb(149, 125, 104) 100.2% );
+   background-size: cover;
+   min-height: 100vh;
+}
+
+#game-container {
+   display: flex;
+   grid-template-columns: repeat(10, 1fr);
+   grid-gap: 5px;
+   margin: 20px auto;
+   max-width: 300px;
+   flex-wrap: wrap;;
+}
+
+.card {
+   background-color: #c67e7e;
+   border: 3px solid #333;
+   border-radius: 10px;
+   height: 50px;
+   width : 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+   box-shadow: 1px 1px ;
+}
+
+.card.revealed {
+   background-color: #edecec;
+   cursor: default;
+}
+
+#timer {
+   font-size: 20px;
+   margin: 10px;
+}
+
+#status {
+   font-size: 18px;
+   font-weight: bold;
+   color: rgb(16, 15, 15);
+}
+   
+   button {
+      padding: 5px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-family: "Permanent marker";
+   }
+   
+   button.hidden {
+      display: none;
+   }

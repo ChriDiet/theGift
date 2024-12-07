@@ -1,10 +1,10 @@
 function changeImage() {
    let image = document.getElementById("klikk");
-   if (image.getAttribute('src') === "./images/logo.svg") {
-      image.src = "images/logo2.svg";
+   if (image.getAttribute('src') === "../images/arnt_logo.svg") {
+      image.src = "../images/arnt_logo2.svg";
    }
    else {
-      image.src ="./images/logo.svg";
+      image.src ="../images/arnt_logo.svg";
    }
 }
 
@@ -37,7 +37,7 @@ function handleFormSubmit2(event) {
 
 function handleFormSubmit3(event) {
    const kodeInput = document.getElementById("kode").value;
-   const riktigKode = "julaften";
+   const riktigKode = "marsipan";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
