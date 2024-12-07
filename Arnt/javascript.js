@@ -67,7 +67,7 @@ function handleFormSubmit5(event) {
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Nice!");
+      alert("Korrekt!");
       open("./codeSix.html")
    } else {
       alert("Det var ikke den riktige koden!");
@@ -103,6 +103,30 @@ function handleFormSubmit7(event) {
 function handleFormSubmit8(event) {
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "forkjørsskilt";
+   const kodeInputLower = kodeInput?.toLowerCase();
+   
+   if (kodeInputLower == riktigKode) {
+      alert("Woop!");
+      open("./numberNi.html")
+   } else {
+      alert("Det var ikke den riktige koden!");
+   }
+}
+function handleFormSubmit9(event) {
+   const kodeInput = document.getElementById("kode").value;
+   const riktigKode = "julaften";
+   const kodeInputLower = kodeInput?.toLowerCase();
+   
+   if (kodeInputLower == riktigKode) {
+      alert("Wohoooo korrekt");
+      open("./code_ti.html")
+   } else {
+      alert("Det var ikke den riktige koden!");
+   }
+}
+function handleFormSubmit10(event) {
+   const kodeInput = document.getElementById("kode").value;
+   const riktigKode = "snakemaster";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {

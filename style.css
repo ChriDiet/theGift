@@ -1,6 +1,14 @@
 a {
 color:#3b3b3d;
 }
+.question {
+   border:2px dotted #3b3b3d;
+   text-align: center;
+   padding: 5px;
+   max-width: 250px;
+   margin-bottom: 10px;
+   align-self: center;
+}
 
 .logo {
    width:150px;
@@ -37,13 +45,11 @@ p {
    max-width: 400px;
    align-self: center;
    padding:10px;
+   display:flex;
+   flex-direction: column;
    
 }
-.question {
-   border:2px dotted #3b3b3d;
-   text-align: center;
-   padding: 5px
-}
+
 
 body {
    font-family: "permanent marker", verdana, sans-serif;
