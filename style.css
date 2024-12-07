@@ -1,3 +1,6 @@
+a {
+color:#3b3b3d;
+}
 
 .logo {
    width:150px;
@@ -38,6 +41,8 @@ p {
 }
 .question {
    border:2px dotted #3b3b3d;
+   text-align: center;
+   padding: 5px
 }
 
 body {
