@@ -15,7 +15,7 @@ const tryAgainButton = document.getElementById('try-again-btn');
 function createCards() {
    pairs = [...letters, ...letters];
    pairs = pairs.sort(() => Math.random() - 0.5);
-   pgameContainer.innerHTML = '';
+   gameContainer.innerHTML = '';
 
    pairs.forEach((letter, index) => {
       const card = document.createElement('div');
