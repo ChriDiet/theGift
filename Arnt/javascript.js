@@ -49,14 +49,18 @@ function handleFormSubmit3(event) {
 function handleFormSubmit4(event) {
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "trampoline";
+   const riktigKode2 = "godt jobbet";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
       alert("Perfekt");
       open("./nrfem.html")
-   } else {
-      alert("Det var ikke det riktige svaret!");
-   }
+   } else if (kodeInputLower == riktigKode2) {
+      alert("GENI!!");
+      open("./finito.html")
+} else {
+   alert("Det var ikke det riktige svaret!");
+}
 }
 
 function handleFormSubmit5(event) {
@@ -238,7 +242,7 @@ function handleFormSubmit12(event) {
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("Yes! Helt riktig!");
+         alert("GENI!");
          open("./codeTjue.html")
       } else {
          alert("WROOONG!");
