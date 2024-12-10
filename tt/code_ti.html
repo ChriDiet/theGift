@@ -4,23 +4,25 @@
       <meta charset="UTF-8">
       <meta name="format-detection" content="telephone=no" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Oppgave 19</title>
-      <script src ="./javascript.js" defer></script>
+      <title>Oppgave 10</title>
+      <script src ="./javascript.js"></script>
       <link rel ="stylesheet" href="../style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
    </head>
    <body>
-         <img id="logo" src="../images/arnt_logo.svg"/>
+      <div class="logo">
+         <img src="../images/logo.svg">
+      </div> 
       <div class ="mainSection">
-         <h1> Du kom deg hit altså? </h1>
-         <p> Klar for nest siste oppgave? Du finner hint til oppgaven i konvolutten merket med 12491.</p>
-         <p> Ordet du trenger for å komme deg videre må du finne et <span id="changeLogo" class="link">sted</span> selv.</p>
-         <p>Lykke til!</p>
+         <h1> Du er for smart!</h1>
+         <p> På tide å spille et lite spill du sikkert ikke har spilt på en stund. Anbefaler å spille på en pc/mac, men det skal fungere på telefonen også! </p>
+         <p> Du må få over en viss score for å få neste kodeord! Hvilken score det er får du nesten finne ut av selv, jeg husker ikke helt...</p>
+         <p class ="question"> Du finner spillet <a href="./snakegame/snake.html"> her</a> </p>
             <div id ="koden">
-               <form onsubmit="handleFormSubmit19(event)">
-                  <label class="kode">Hva er svaret?</label>
+               <form onsubmit="handleFormSubmit10(event)">
+                  <label class="kode">Hva er kodeordet?</label>
                <div class = "koden1">
                   <input type="text" id="kode" name="kode" required />
                   <button type="submit">Send</button>
