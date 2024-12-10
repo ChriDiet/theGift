@@ -22,7 +22,7 @@ function handleFormSubmit(event) {
 
 function handleFormSubmit2(event) {
    const kodeInput = document.getElementById("kode").value;
-   const riktigKode = "dette var for lett";
+   const riktigKode = "sangtekster";
    const kodeInputLower = kodeInput?.toLowerCase();
 
    if (kodeInputLower == riktigKode) {
