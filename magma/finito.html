@@ -5,13 +5,97 @@
       <meta name="format-detection" content="telephone=no" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Oppgave 20</title>
-      <script src ="./javascript.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
       <link rel ="stylesheet" href="../style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
    </head>
    <body>
+      <script>
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const count = 16,
+   defaults = {
+      ticks: 450,
+      gravity: 0.5,
+      decay: 0.94,
+      startVelocity: 55,
+      colors: ["#FFE400", "#FFBD00", "#E89400", "#FFCA6C", "#FDFFB8"],
+};
+
+function fireRight(particleRatio, opts) {
+   confetti(
+      Object.assign({}, defaults, opts, {
+         particleCount: Math.floor(count * particleRatio),
+         origin: { x: 1, y: randomInRange(0.4, 0.6) }, 
+         angle: 130,
+      })
+   );
+}
+
+function fireLeft(particleRatio, opts) {
+   confetti(
+      Object.assign({}, defaults, opts, {
+      particleCount: Math.floor(count * particleRatio),
+      origin: { x: 0, y: randomInRange(0.4, 0.6) },
+      angle: 50,
+      })
+   );
+}
+
+function shootConfetti() {
+fireLeft(0.25, {
+   spread: 55,
+});
+
+fireRight(0.25, {
+   spread: 55,
+});
+
+fireLeft(0.2, {
+   spread: 55,
+});
+
+fireRight(0.2, {
+   spread: 55,
+});
+
+fireLeft(0.35, {
+   spread: 55,
+   decay: 0.91,
+   scalar: 0.8,
+});
+
+fireRight(0.35, {
+   spread: 55,
+   decay: 0.91,
+   scalar: 0.8,
+});
+
+   fireLeft(0.1, {
+   spread: 60,
+   decay: 0.92,
+   scalar: 1.2,
+});
+
+fireRight(0.1, {
+   spread: 60,
+   decay: 0.92,
+   scalar: 1.2,
+   });
+   
+}
+
+const intervalId = setInterval(shootConfetti, 50); 
+
+setTimeout(() => {
+  clearInterval(intervalId); 
+}, 5500);
+
+</script>
          <img id="logo" src="../images/mm_logo.svg"/>
       <div class ="mainSection">
          <h1> Gratulerer! </h1>

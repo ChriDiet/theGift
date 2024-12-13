@@ -5,8 +5,6 @@ changeLogo.addEventListener("click", () => {
    logo.src = '../images/mm_logo2.svg';
 });
 
-
-
 function handleFormSubmit(event) {
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "-13";
