@@ -17,7 +17,7 @@ function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-const count = 16,
+const count = 6,
    defaults = {
       ticks: 450,
       gravity: 0.5,
@@ -31,7 +31,7 @@ function fireRight(particleRatio, opts) {
       Object.assign({}, defaults, opts, {
          particleCount: Math.floor(count * particleRatio),
          origin: { x: 1, y: randomInRange(0.4, 0.6) }, 
-         angle: 130,
+         angle: 140,
       })
    );
 }
@@ -41,48 +41,48 @@ function fireLeft(particleRatio, opts) {
       Object.assign({}, defaults, opts, {
       particleCount: Math.floor(count * particleRatio),
       origin: { x: 0, y: randomInRange(0.4, 0.6) },
-      angle: 50,
+      angle: 30,
       })
    );
 }
 
 function shootConfetti() {
 fireLeft(0.25, {
-   spread: 55,
+   spread: 50,
 });
 
 fireRight(0.25, {
-   spread: 55,
+   spread: 50,
 });
 
 fireLeft(0.2, {
-   spread: 55,
+   spread: 50,
 });
 
 fireRight(0.2, {
-   spread: 55,
+   spread: 50,
 });
 
 fireLeft(0.35, {
-   spread: 55,
+   spread: 50,
    decay: 0.91,
    scalar: 0.8,
 });
 
 fireRight(0.35, {
-   spread: 55,
+   spread: 50,
    decay: 0.91,
    scalar: 0.8,
 });
 
    fireLeft(0.1, {
-   spread: 60,
+   spread: 50,
    decay: 0.92,
    scalar: 1.2,
 });
 
 fireRight(0.1, {
-   spread: 60,
+   spread: 50,
    decay: 0.92,
    scalar: 1.2,
    });
