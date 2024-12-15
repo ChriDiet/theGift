@@ -17,12 +17,12 @@ function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-const count = 15,
+const count = 7000,
    defaults = {
-      ticks: 450,
-      gravity: 0.5,
-      decay: 0.94,
-      startVelocity: 55,
+      ticks: 750,
+      gravity: 0.4,
+      decay: 1.4,
+      startVelocity: 48,
       colors: ["#FFE400", "#FFBD00", "#E89400", "#FFCA6C", "#FDFFB8"],
 };
 
@@ -30,8 +30,8 @@ function fireRight(particleRatio, opts) {
    confetti(
       Object.assign({}, defaults, opts, {
          particleCount: Math.floor(count * particleRatio),
-         origin: { x: 1, y: randomInRange(0.4, 0.6) }, 
-         angle: 140,
+         origin: { x: 0 }, 
+         angle: 70,
       })
    );
 }
@@ -40,52 +40,60 @@ function fireLeft(particleRatio, opts) {
    confetti(
       Object.assign({}, defaults, opts, {
       particleCount: Math.floor(count * particleRatio),
-      origin: { x: 0, y: randomInRange(0.4, 0.6) },
-      angle: 30,
-      startVelocity: 40,
+      origin: { x: 1 },
+      angle: 110,
       })
+      
    );
 }
 
 function shootConfetti() {
-fireLeft(0.25, {
-   spread: 50,
+fireLeft(0.5, {
+   spread: 20,
+   startVelocity: 100,
+   scalar: 0.2,
 });
 
-fireRight(0.25, {
-   spread: 50,
+fireRight(0.5, {
+   spread: 20,
+   startVelocity: 100,
+   scalar: 0.2,
 });
 
-fireLeft(0.2, {
-   spread: 50,
+fireLeft(0.3, {
+   spread: 35,
+   startVelocity: 50,
+   scalar: 0.3,
 });
 
-fireRight(0.2, {
-   spread: 50,
+fireRight(0.3, {
+   spread: 35,
+   startVelocity: 50,
+   scalar: 0.3,
 });
 
-fireLeft(0.35, {
-   spread: 50,
+fireLeft(0.55, {
+   spread: 55,
    decay: 0.91,
-   scalar: 0.8,
+   scalar: 0.25,
 });
 
-fireRight(0.35, {
-   spread: 50,
+fireRight(0.55, {
+   spread: 55,
    decay: 0.91,
-   scalar: 0.8,
+   scalar: 0.25,
 });
 
    fireLeft(0.1, {
-   spread: 50,
+   spread: 30,
    decay: 0.92,
-   scalar: 1.2,
+   scalar: 0.7,
 });
 
 fireRight(0.1, {
-   spread: 50,
+   spread: 30,
    decay: 0.92,
-   scalar: 1.2,
+   scalar: 0.7,
    });
    
 }
@@ -94,7 +102,7 @@ const intervalId = setInterval(shootConfetti, 100);
 
 setTimeout(() => {
   clearInterval(intervalId); 
-}, 5000);
+}, 100);
 
 </script>
          <img id="logo" src="../images/mm_logo.svg"/>
