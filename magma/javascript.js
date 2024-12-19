@@ -124,18 +124,6 @@ function handleFormSubmit9(event) {
       alert("Really? FEIL!");
    }
 }
-function handleFormSubmit10(event) {
-   const kodeInput = document.getElementById("kode").value;
-   const riktigKode = "snakemaster";
-   const kodeInputLower = kodeInput?.toLowerCase();
-   
-   if (kodeInputLower == riktigKode) {
-      alert("Woop!");
-      open("./oppgave_11.html")
-   } else {
-      alert("Jeg trenger det korrekte svaret!");
-   }
-}
 function handleFormSubmit11(event) {
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "4";
@@ -211,14 +199,14 @@ function handleFormSubmit12(event) {
 
    function handleFormSubmit17(event) {
       const kodeInput = document.getElementById("kode").value;
-      const riktigKode = "11";
+      const riktigKode = "smartass";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("For lett?");
+         alert("Yes!");
          open("./atten_code.html")
       } else {
-         alert("Feil antall! Prøv igjen!");
+         alert("Feil kodeord! Prøv igjen!");
       }
    }
 
