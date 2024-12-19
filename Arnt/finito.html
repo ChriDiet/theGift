@@ -4,18 +4,142 @@
       <meta charset="UTF-8">
       <meta name="format-detection" content="telephone=no" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Oppgave 20</title>
-      <script src ="./javascript.js" defer></script>
+      <title>Finito</title>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
       <link rel ="stylesheet" href="../style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
    </head>
    <body>
+      <script>
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const count = 30,
+   defaults = {
+      ticks: 750,
+      gravity: 0.4,
+      decay: 0.94,
+      startVelocity: 75,
+      colors: ["#FFE400", "#FFBD00", "#E89400", "#FFCA6C", "#FDFFB8"],
+
+
+};
+
+function fireRight(particleRatio, opts) {
+   confetti(
+      Object.assign({}, defaults, opts, {
+         particleCount: Math.floor(count * particleRatio),
+         origin: { x: 0 }, 
+         angle: 50,
+      })
+   );
+}
+
+function fireLeft(particleRatio, opts) {
+   confetti(
+      Object.assign({}, defaults, opts, {
+      particleCount: Math.floor(count * particleRatio),
+      origin: { x: 1 },
+      angle: 130,
+      })
+      
+   );
+}
+
+function shootConfetti() {
+fireLeft(0.5, {
+   spread: 60,
+   scalar: 0.65,
+   drift: randomInRange(-0.4, 0.4),
+});
+
+fireRight(0.5, {
+   spread: 60,
+   scalar: 0.65,
+   drift: randomInRange(-0.4, 0.4),
+});
+
+fireLeft(0.3, {
+   spread: 55,
+   scalar: 0.7,
+   drift: randomInRange(0.4, - 0.4),
+});
+
+fireRight(0.3, {
+   spread: 55,
+   scalar: 0.7,
+   drift: randomInRange(0.4, - 0.4),
+});
+
+fireLeft(0.55, {
+   spread: 45,
+   decay: 0.91,
+   scalar: 0.75,
+   drift: randomInRange(0.9, - 0.9),
+});
+
+fireRight(0.55, {
+   spread: 45,
+   decay: 0.91,
+   scalar: 0.75,
+   drift: randomInRange(0.9, - 0.9),
+});
+
+   fireLeft(0.1, {
+   spread: 50,
+   decay: 0.92,
+   scalar: 0.85,
+   drift: randomInRange(- 0.9, 0.9),
+});
+
+fireRight(0.1, {
+   spread: 50,
+   decay: 0.92,
+   scalar: 0.85,
+   drift: randomInRange(- 0.9, 0.9),
+   });
+   
+}
+fireLeft(0.1, {
+   spread: 50,
+   decay: 0.92,
+   scalar: 0.5,
+});
+
+fireRight(0.1, {
+   spread: 50,
+   decay: 0.92,
+   scalar: 0.5,
+   });
+   
+fireLeft(0.1, {
+   spread: 55,
+   decay: 0.92,
+   scalar: 0.6,
+});
+
+fireRight(0.1, {
+   spread: 55,
+   decay: 0.92,
+   scalar: 0.6,
+   });
+   
+
+
+const intervalId = setInterval(shootConfetti, 50); 
+
+setTimeout(() => {
+clearInterval(intervalId); 
+}, 4000);
+
+</script>
          <img id="logo" src="../images/arnt_logo.svg"/>
       <div class ="mainSection">
          <h1> Gratulerer! </h1>
-         <p> Du kom deg gjennom alle oppgavene! Du har hatt tittelen "Gåtemester Wiseth" gjennom hele eventyret vårt, men nå har du virkelig gjort deg fortjent til å kalle deg det! </p>
+         <p> Du kom dere gjennom alle oppgavene!</p>
          </div>
    </body>
 </html>
