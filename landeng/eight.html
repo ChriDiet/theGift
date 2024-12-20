@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Oppgave 8</title>
+      <script src ="./javascript.js" defer></script>
+      <link rel ="stylesheet" href="../style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div class="logo">
+         <img src="../images/tt_logo.svg">
+      </div> 
+      <div class ="mainSection">
+         <h1> Det gikk sakte...eller? </h1>
+         <p> La oss kjøre på med en veldig lett oppgave for å gi dere litt selvtillit! Hvem elsker vel ikke en liten rebus? </p>
+         <p>Her trenger dere ingen hint!</p>
+         <img src="../images/rebus.svg" class="question"/>
+            <div id ="koden">
+               <form onsubmit="handleFormSubmit8(event)">
+                  <label class="kode">Hva er svaret på rebusen?</label>
+               <div class = "koden1">
+                  <input type="text" id="kode" name="kode" required />
+                  <button type="submit">Send</button>
+                  <p id="status"></p>
+               </div>
+            </form>
+         </div>
+   </body>
+</html>

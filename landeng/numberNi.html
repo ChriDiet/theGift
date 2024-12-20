@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Oppgave 9</title>
+      <script src ="./javascript.js" defer></script>
+      <link rel ="stylesheet" href="../style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div class="logo">
+         <img src="../images/tt_logo.svg">
+      </div> 
+      <div class ="mainSection">
+         <h1> Den var lett, var den ikke? </h1>
+         <p> Kanskje dere skal ta en liten pause mens dere er på topp? Eller...? <br><br>
+            Nei? Ok..Da går vi vel videre da! </p>
+         <p>Oppgave + hint er i konvolutten merket med 61304</p>
+            <div id ="koden">
+               <form onsubmit="handleFormSubmit9(event)">
+                  <label class="kode">Hva kom dere frem til?</label>
+               <div class = "koden1">
+                  <input type="text" id="kode" name="kode" required />
+                  <button type="submit">Send</button>
+                  <p id="status"></p>
+               </div>
+            </form>
+         </div>
+   </body>
+</html>
