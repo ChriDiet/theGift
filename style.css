@@ -91,3 +91,12 @@ span {
    margin:0;
    font-size: 10px;
 }
+
+#hintet {
+   font-size: 13px;
+   align-self: center;
+}
+
+.hint {
+   text-align: center;
+}

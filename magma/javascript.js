@@ -26,6 +26,21 @@ changeLogo.addEventListener("click", () => {
    logo.src = '../images/mm_logo2.svg';
 });
 
+function displayHint1() {
+   document.getElementById("hintet").textContent = "Det finnes et felt på denne siden";
+}
+
+function displayHint2() {
+   document.getElementById("hintet").textContent = "Det står allerede noe i feltet";
+}
+
+function displayHint3() {
+   document.getElementById("hintet").textContent = "Du må bytte ut noe med svaret ditt";
+}
+function displayHint4() {
+   document.getElementById("hintet").textContent = "Før html";
+}
+
 
 function handleFormSubmit(event) {
    event.preventDefault()
