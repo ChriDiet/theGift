@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Oppgave 4</title>
+   <script src ="javascript.js"></script>
+   <link rel ="stylesheet" href="../style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="logo">
+      <img src="../images/p_logo.svg">
+   </div>
+   <div class ="mainSection">
+      <h1>Woohoo! Du kan brette jo!</h1>
+      <p> Lyst til å bruke hukommelsen litt? Supert! Da gjør vi det! 
+         Du har 40 sekunder på å klare spillet, men du kan prøve så mange ganger du vil hvis 
+         du ikke klarer det på første forsøk! Trenger du hint av en eller annen grunn finner du det i 
+         konvolutten merket med 42253 23068</p>
+      <p class="question">Neste oppgave finner du <a href="memorygame/memory.html">her</a></p>
+      </div>
+   <div id ="koden">
+      <form onsubmit="handleFormSubmit4(event)">
+         <label class="kode">Hva er svaret?</label>
+      <div class = "koden1">
+         <input type="text" id="kode" name="kode" required />
+         <button type="submit">Send</button>
+         <p id="status"></p>
+   </div>
+   </form>
+</body>
+</html>

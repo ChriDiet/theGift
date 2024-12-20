@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Oppgave 17</title>
+      <script src ="./javascript.js" defer></script>
+      <link rel ="stylesheet" href="../style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div class="logo">
+         <img src="../images/p_logo.svg">
+      </div> 
+      <div class ="mainSection">
+         <h1> Du er altfor smart!</h1>
+         <img class="gif" src="../images/brainiac.gif"/>
+         <p> Jeg synes det er på tide å spille et lite spill igjen! Du har sikkert ikke spilt dette på noen år! 
+            Anbefaler å spille på en pc/mac, men det skal fungere på telefonen også! </p>
+         <p> Du må få over en viss score for å få neste kodeord! Hvilken score det er får du nesten finne ut av selv, jeg husker ikke helt...</p>
+         <p class ="question"> Du finner spillet <a href="./snakegame/snake.html"> her</a> </p>
+            <div id ="koden">
+               <form onsubmit="handleFormSubmit17(event)">
+                  <label class="kode">Hva er kodeordet?</label>
+               <div class = "koden1">
+                  <input type="text" id="kode" name="kode" required />
+                  <button type="submit">Send</button>
+                  <p id="status"></p>
+               </div>
+            </form>
+         </div>
+   </body>
+</html>
