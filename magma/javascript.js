@@ -1,3 +1,24 @@
+const errorMessages = [
+   "Det var dessverre feil",
+   "Prøv igjen!",
+   "Ikke riktig, prøv på nytt",
+   "Dette er ikke riktig",
+   "Feil svar :(",
+   "Oops! Det stemmer ikke",
+   "Kanskje neste gang?",
+   "Ikke bra nok..",
+   "Nope. Prøv igjen!",
+   "Feil! Ikke gi opp!",
+   "Nope",
+   "Fortsett å prøve!",
+   "Dette var feil, forsøk igjen.",
+   "Ikke bare gjett deg frem da",
+   "Det stemmer dessverre ikke",
+   "Nei, nei og atter nei",
+   "Hmm, prøv noe annet",
+   "Feil feil feil!",
+   "Niks"
+];
 const logo = document.getElementById('logo');
 const changeLogo = document.getElementById('changeLogo');
 
@@ -5,232 +26,251 @@ changeLogo.addEventListener("click", () => {
    logo.src = '../images/mm_logo2.svg';
 });
 
+
 function handleFormSubmit(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "-13";
 
    if (kodeInput === riktigKode) {
-      alert("Litt for lett?");
-      open("./code_two.html")
+      window.location.href="./code_two.html";
    } else {
-      alert("Feil!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
    }
 
 
 function handleFormSubmit2(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "sangtekster";
    const kodeInputLower = kodeInput?.toLowerCase();
 
    if (kodeInputLower == riktigKode) {
-      alert("Korrekt!");
-      open("./numeroTres.html")
+      window.location.href="./numeroTres.html";
    } else {
-      alert("Feil feil feil!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
 
 function handleFormSubmit3(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "marsipan";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Ikke verst!");
-      open("./NumberFour.html")
+      window.location.href="./NumberFour.html";
    } else {
-      alert("Det var ikke riktig!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
 
 function handleFormSubmit4(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "trampoline";
    const riktigKode2 = "godt jobbet";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Perfekt");
-      open("./nrfem.html")
+      window.location.href="./nrfem.html";
    } else if (kodeInputLower == riktigKode2) {
-      alert("GENI!!");
-      open("./finito.html")
+      window.location.href="./finito.html";
 } else {
-   alert("Det var ikke det riktige svaret!");
+   const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
 }
 }
 
 function handleFormSubmit5(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "swift";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Korrekt!");
-      open("./codeSix.html")
+      window.location.href="./codeSix.html";
    } else {
-      alert("Prøv igjen!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
 
 function handleFormSubmit6(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "evolution";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Riktig!");
-      open("./nrSeven.html")
+      window.location.href="./nrSeven.html";
    } else {
-      alert("FEIL FEIL FEIL!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
 
 function handleFormSubmit7(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "piano";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Grattis!");
-      open("./eight.html")
+      window.location.href="./eight.html";
    } else {
-      alert("Nei og nei, totalt feil!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
 
 function handleFormSubmit8(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "forkjørsskilt";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Woop!");
-      open("./numberNi.html")
+      window.location.href="./numberNi.html";
    } else {
-      alert("WROOOOONG!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
 function handleFormSubmit9(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "julaften";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Wohoooo korrekt");
-      open("./code_ti.html")
+      window.location.href="./code_ti.html";
    } else {
-      alert("Really? FEIL!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
+
 function handleFormSubmit11(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "4";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Ikke verst!");
-      open("./twelve.html")
+      window.location.href="./twelve.html";
    } else {
-      alert("Det var ikke det riktige tallet!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
 function handleFormSubmit12(event) {
+   event.preventDefault()
    const kodeInput = document.getElementById("kode").value;
    const riktigKode = "drastisk";
    const kodeInputLower = kodeInput?.toLowerCase();
    
    if (kodeInputLower == riktigKode) {
-      alert("Imponerende!");
-      open("./tretten.html")
+      window.location.href="./tretten.html";
    } else {
-      alert("Feil!");
+      const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
    }
 }
    function handleFormSubmit13(event) {
+      event.preventDefault()
       const kodeInput = document.getElementById("kode").value;
       const riktigKode = "1";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("Barnemat!");
-         open("./codeFourteen.html")
+         window.location.href="./codeFourteen.html";
       } else {
-         alert("Ikke bare prøv noe random!");
+         const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
       }
    }
    function handleFormSubmit14(event) {
+      event.preventDefault()
       const kodeInput = document.getElementById("kode").value;
       const riktigKode = "bordplate";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("Smarting!");
-         open("./kode_15.html")
+         window.location.href="./kode_15.html";
       } else {
-         alert("Det var ikke den riktige koden!");
+         const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
       }
    }
    function handleFormSubmit15(event) {
+      event.preventDefault()
       const kodeInput = document.getElementById("kode").value;
       const riktigKode = "smartass";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("Riktig!");
-         open("./numeroSeksten.html")
+         window.location.href="./numeroSeksten.html";
       } else {
-         alert("FEIL!");
+         const randomIndex = Math.floor(Math.random() * errorMessages.length);
+         document.getElementById("status").textContent = errorMessages[randomIndex];
       }
    }
    function handleFormSubmit16(event) {
+      event.preventDefault()
       const kodeInput = document.getElementById("kode").value;
       const riktigKode = "tyskeren øl vann pop";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("Yay!");
-         open("./17.html")
+         window.location.href="./17.html";
       } else {
-         alert("FEIL! TIPS: Ingen komma, kun mellomrom!");
+         const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
       }
    }
 
    function handleFormSubmit17(event) {
+      event.preventDefault()
       const kodeInput = document.getElementById("kode").value;
-      const riktigKode = "smartass";
+      const riktigKode = "snakemaster";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("Yes!");
-         open("./atten_code.html")
+         window.location.href="./atten_code.html";
       } else {
-         alert("Feil kodeord! Prøv igjen!");
+         const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
       }
    }
 
    function handleFormSubmit18(event) {
+      event.preventDefault()
       const kodeInput = document.getElementById("kode").value;
       const riktigKode = "the beginning of the end";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("Riktig!");
-         open("./oppgave_nitten.html")
+         window.location.href="./oppgave_nitten.html";
       } else {
-         alert("Feil feil feil! Skjerpings!");
+         const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
       }
    }
    function handleFormSubmit19(event) {
+      event.preventDefault()
       const kodeInput = document.getElementById("kode").value;
       const riktigKode = "gjemt";
       const kodeInputLower = kodeInput?.toLowerCase();
       
       if (kodeInputLower == riktigKode) {
-         alert("GENI!");
-         open("./codeTjue.html")
+         window.location.href="./codeTjue.html";
       } else {
-         alert("WROOONG!");
+         const randomIndex = Math.floor(Math.random() * errorMessages.length);
+      document.getElementById("status").textContent = errorMessages[randomIndex];
       }
    }
