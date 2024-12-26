@@ -39,6 +39,17 @@ function displayHint3() {
 function displayHint4() {
    document.getElementById("hintet").textContent = "Før html";
 }
+function displayHint11() {
+   document.getElementById("hintet").textContent = "Engelsk - norsk - norsk";
+}
+
+function displayHint22() {
+   document.getElementById("hintet").textContent = "Hvordan er været?";
+}
+
+function displayHint33() {
+   document.getElementById("hintet").textContent = "Ikke varmt, ikke kaldt, men ....?";
+}
 
 function handleFormSubmit(event) {
    event.preventDefault()

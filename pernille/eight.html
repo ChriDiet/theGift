@@ -17,9 +17,14 @@
       </div> 
       <div class ="mainSection">
          <h1> Det gikk sakte...eller? </h1>
-         <p> La oss kjøre på med en veldig lett oppgave for å gi deg litt selvtillit! Hvem elsker vel ikke en liten rebus? </p>
-         <p>Her trenger du ingen hint!</p>
+         <p> La oss kjøre på med en halvveis lett oppgave for å gi deg litt selvtillit! Hvem elsker vel ikke en liten rebus? </p>
          <img src="../images/rebus.svg" class="question"/>
+         <div class ="hint">
+            <button onclick="displayHint11()">Hint 1</button>
+            <button onclick="displayHint22()">Hint 2</button>
+            <button onclick="displayHint33()">Hint 3</button>
+            <p id="hintet"></p>
+         </div>
             <div id ="koden">
                <form onsubmit="handleFormSubmit8(event)">
                   <label class="kode">Hva er svaret på rebusen?</label>
