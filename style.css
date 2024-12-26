@@ -100,3 +100,9 @@ span {
 .hint {
    text-align: center;
 }
+
+.opg9 {
+   width: 160px;
+   align-self: center;
+   padding: 10px;
+}
