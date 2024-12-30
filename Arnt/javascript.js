@@ -23,7 +23,7 @@ const logo = document.getElementById('logo');
 const changeLogo = document.getElementById('changeLogo');
 
 changeLogo.addEventListener("click", () => {
-   logo.src = '../images/arnt_logo2.svg';
+   logo.src = '../images/ma_logo2.svg';
 });
 function displayHint1() {
    document.getElementById("hintet").textContent = "Det finnes et felt på denne siden";
